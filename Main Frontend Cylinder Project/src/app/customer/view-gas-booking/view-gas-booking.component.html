@@ -1,0 +1,23 @@
+<div class="admin">
+    <div class="head2">
+        <p style="text-align:center">GasBookings</p>
+    </div>
+    <div class="body">
+        <table class="table table-bordered">
+            <tr *ngIf="gasBooking.length > 0">
+                <th>Booking Id</th>
+                <th>Booking Date</th>
+                <th>Bill</th>
+                <th>Status</th>
+            </tr>
+            <tr *ngFor="let gasBook of gasBooking">
+                <td>{{gasBook.gasBookingId}}</td>
+                <td>{{gasBook.bookingDate}}</td>
+                <td>{{gasBook.bill}}</td>
+                <td>{{gasBook.status}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+

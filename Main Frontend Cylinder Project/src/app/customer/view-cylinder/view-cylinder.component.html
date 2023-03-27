@@ -1,0 +1,24 @@
+<div class="admin">
+    <div class="head2">
+        <p style="text-align:center">Types of Cylinder </p>
+    </div>
+    <div class="body">
+        <table class="table table-bordered">
+            <tr *ngIf="cylinders.length > 0">
+                <th>Cylinder Id</th>
+                <th>Type</th>
+                <th>Weight</th>
+                <th>Strap Color</th>
+                <th>Price</th>
+            </tr>
+            <tr *ngFor="let cyl of cylinders">
+                <td>{{cyl.cylinderId}}</td>
+                <td>{{cyl.type}}</td>
+                <td>{{cyl.weight}}</td>
+                <td>{{cyl.strapColor}}</td>
+                <td>{{cyl.price}}</td>
+             </tr>
+
+        </table>
+    </div>
+</div>

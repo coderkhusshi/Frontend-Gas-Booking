@@ -1,0 +1,51 @@
+.customer{
+    border: 2px solid #f1f1f1;
+    width: 72%;
+    height:auto;
+    margin-right: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: rgb(201, 207, 209);
+    float: right;
+}
+
+
+.head{
+    position:relative;
+    height: 45px;
+    width:auto;
+    padding-top: 5px; 
+    margin-bottom: 10px; 
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+    margin-top: 66.3px;
+}
+
+.head2{
+    position:relative;
+    background-color:rgb(50, 79, 83);
+    height: 45px;
+    width:auto;
+    padding-top: 5px; 
+    margin-bottom: 10px; 
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+}
+
+.body{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.alert {
+    position:relative;
+    background-color: transparent;
+    border: transparent;
+    height: 2px;
+    padding-top: 5px;
+    text-align:left;
+    font-size: 12px;
+    font-weight: bold;
+  }

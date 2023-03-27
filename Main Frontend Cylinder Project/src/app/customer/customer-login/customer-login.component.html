@@ -1,0 +1,90 @@
+<div class="head">
+    <!--&nbsp;&nbsp;&nbsp; Customer Login-->
+</div>
+
+<!--<form [formGroup]="loginForm" (ngSubmit)="validateCustomer()">
+    <div class="login">
+        <div class="center">
+            <h1><label>Login</label></h1>
+        </div>
+        <label for="Username" style=" float:left;">Enter Username: </label>
+        <input class="form-control" type="text" name="username" id="username" formControlName="username"> &nbsp;
+        <br>
+        <label for="Password" style=" float:left;">Enter Password: </label>
+        <input class="form-control" type="password" name="password" id="password" formControlName="password">
+        <button type="submit"> Login </button>  
+        <div class="center">
+            ________ OR________ <br>
+        </div>
+        <br>
+        <div class="center">
+            <a href="customer/forgot">Forgot  password? </a>
+        </div>
+        <br><hr>
+        <div class="center">
+            <a href="customer/registration">Don't have an account? Sign Up </a>
+        </div>
+        <br>
+    </div>
+</form>  -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+
+<div class="container">
+    <div class="row">
+        <div class="column">
+            <div class="body1">
+                <img src="../../../assets/Images/login.png" style="height:490px; width: 500px;">
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="image">
+                <img src="../../../assets/Images/avatar-3814081_640.png" style="height:110px; width: 110px;"
+                    class="rounded-pill">
+            </div>
+
+            <div class="body">
+                <form [formGroup]="loginForm" (ngSubmit)="validateCustomer()">
+                    <br>
+                    <br> <br>
+                    <i class="fas fa-user"></i>
+                    <input class="form-control" type="text" placeholder="User Name" name="username" id="username"
+                        formControlName="username">
+
+                    <div *ngIf="loginForm.controls['username'].invalid && loginForm.controls['username'].touched"
+                        class="alert alert-danger">
+                        <div *ngIf="loginForm.controls['username'].errors.required">
+                            User Name is required.
+                        </div>
+                    </div>
+
+                    <i class="fas fa-lock"></i>
+                    <input class="form-control" placeholder="Password" type="password" name="password" id="password"
+                        formControlName="password">
+                    <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched"
+                        class="alert alert-danger">
+                        <div *ngIf="loginForm.controls['password'].errors.required">
+                            Password is required.
+                        </div>
+                        <div *ngIf="loginForm.controls['password'].errors.minlength">
+                            Password must be at least 8 characters
+                        </div>
+                        <div *ngIf="loginForm.controls['password'].errors.maxlength">
+                            Password must not exceed 12 characters
+                        </div>
+                    </div>
+                    <a href="customer/forgot" style="float: right; margin-top: 5px;">Forgot password?</a><br>
+
+                    <br>
+                    <input type="submit" value="LOGIN">
+                    <hr>
+                    Not a member? <a href="customer/registration">Signup now</a>
+                    <br><br>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,108 @@
+<div [ngSwitch]="loginStatus">  
+    <div *ngSwitchCase="'adminlogin'">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href=""><img src="../assets/Images/images.png" alt="Avatar Logo"
+                        style="width:40px;" class="rounded-pill"> Gas Station</a>
+                <form class="d-flex">
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="home"><i class="fa fa-fw fa-home"></i>Home</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="about"><i class="fa fa-fw fa-info-circle "></i>About Us</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="myactivity"><i class="fa fa-fw fa-universal-access"></i>My
+                                    Activity</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="contactUs"><i class="fa fa-fw fa-envelope"></i>Contact Us</a>
+                            </li>
+                            <li class="nav-item active">
+                                <button (click)="loggedOut()" class="nav-link" href="customer/login">Logout</button>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <div *ngSwitchCase="'customerlogin'">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href=""><img src="../assets/Images/images.png" alt="Avatar Logo"
+                        style="width:40px;" class="rounded-pill"> Gas Station</a>
+                <form class="d-flex">
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="home"><i class="fa fa-fw fa-home"></i>Home</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="about"><i class="fa fa-fw fa-info-circle "></i>About Us</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="customer/myactivity"><i class="fa fa-fw fa-universal-access"></i>My
+                                    Activity</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="contactUs"><i class="fa fa-fw fa-envelope"></i>Contact Us</a>
+                            </li>
+                            <li class="nav-item active">
+                                <button (click)="loggedOut()" class="nav-link" href="home">Logout</button>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <div *ngSwitchDefault>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href=""><img src="../assets/Images/images.png" alt="Avatar Logo"
+                        style="width:40px;" class="rounded-pill"> Gas Station</a>
+                <form class="d-flex">
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="home"><i class="fa fa-fw fa-home"></i>Home</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="about"><i class="fa fa-fw fa-info-circle "></i>About Us</a>
+                            </li>
+                            <li class="nav-item active dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i
+                                        class="fa fa-fw fa-users"></i>Login</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="customer/login">User</a></li>
+                                    <li><a class="dropdown-item" href="admin/login">Admin</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="customer/registration"> <i
+                                        class="fa fa-fw fa-user-circle-o "></i>Registration</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="contactUs"><i class="fa fa-fw fa-envelope"></i>Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+</div>
+<router-outlet></router-outlet>

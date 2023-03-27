@@ -1,0 +1,58 @@
+<div class="head">
+  <!-- &nbsp;&nbsp;&nbsp; MyActivity Form-->
+</div>
+<form class="form">
+  <div class="center">
+    <a><img src="../../../assets/Images/admin icon.png" style="width: 100px;"> </a><br>
+  </div>
+  <p style="text-align:center">{{name}} <br>{{email}}</p>
+
+  <nav class="navbar navbar-dark bg-dark" style="width: 200px; ">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>&nbsp; Activities
+      </button>
+    </div>
+  </nav>
+
+  <div class="collapse" id="navbarToggleExternalContent" style="width: 200px;">
+    <div class="bg-dark p-4">
+      <ul class="navbar-nav" style="color: azure;">
+        <li class="nav-item">
+          <button class="nav-link" (click)="Activity($event)" value="Profile" id="Profile">View Profile</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" (click)="Activity($event)" value="Customer">View Customers</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" (click)="Activity($event)" value="Cylinder">Manage Cylinder</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" (click)="Activity($event)" value="GasBookings" id="GasBookings">GasBookings</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</form>
+
+<div [ngSwitch]="activity">
+  <div *ngSwitchCase="'Profile'">
+    <app-update-profile></app-update-profile>
+  </div>
+  <div *ngSwitchCase="'Customer'">
+    <app-view-customer></app-view-customer>
+  </div>
+  <div *ngSwitchCase="'Cylinder'">
+    <app-manage-cylinder></app-manage-cylinder>
+  </div>
+  <div *ngSwitchCase="'GasBookings'">
+    <app-view-gas-booking></app-view-gas-booking>
+  </div>
+  <!--<div *ngSwithDefault>
+    <app-update-profile></app-update-profile>
+  </div>-->
+
+</div>

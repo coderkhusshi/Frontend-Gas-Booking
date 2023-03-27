@@ -1,0 +1,37 @@
+<div class="admin">
+    <div class="head2">
+        <p style="text-align:center">Customer Details</p>
+    </div>
+    <div class="body">
+        <table class="table">
+            <tr>
+                <th>customer Id</th>
+                <th>User Name</th>
+                <th>Password</th>
+                <th>Address</th>
+                <th>Mobile Number</th>
+                <th>Email</th>
+                <th>Bank</th>
+                <th>Account No</th>
+                <th>Ifsc No</th>
+                <th>Pan No</th>
+                <th>Cylinder Id</th>
+
+            </tr>
+            <tr *ngFor="let cust of customers">
+                <td>{{cust.customerId}}</td>
+                <td>{{cust.username}}</td>
+                <td>{{cust.password}}</td>
+                <td>{{cust.address}}</td>
+                <td>{{cust.mobileNumber}}</td>
+                <td>{{cust.email}}</td>
+                <td>{{cust.bank.bankName}}</td>
+                <td>{{cust.accountNo}}</td>
+                <td>{{cust.ifscNo}}</td>
+                <td>{{cust.pan}}</td>
+                <td>{{cust.cylinder.cylinderId}}</td>
+                <td><input type="button" (click)="deleteCustomer(cust.customerId)" value="Delete"></td>
+            </tr>
+        </table>
+    </div>
+</div>

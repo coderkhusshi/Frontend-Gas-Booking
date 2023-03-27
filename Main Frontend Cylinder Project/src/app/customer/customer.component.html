@@ -1,0 +1,163 @@
+<div class="head"></div>
+
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="../../assets/Images/download.png" alt="" />
+            <h3>Welcome</h3>
+            <button (click)="login($event)">Login</button><br>
+        </div>
+        <div class="col-md-9 register-right">
+            <div class="tab-content" id="myTabContent">
+                <h3 class="register-heading">Register</h3>
+                <form [formGroup]="customerForm" (ngSubmit)="saveCustomer()">
+                    <div class="row register-form">
+                        <div class="col-md-6">
+
+                            <input class="form-control" type="text" name="username" id="username"
+                                placeholder="User Name *" formControlName="username">
+                            <div *ngIf="customerForm.controls['username'].invalid && customerForm.controls['username'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['username'].errors.required">
+                                    User Name is required.
+                                </div>
+                            </div>
+
+                            <input class="form-control" type="text" name="address" id="address" placeholder="Address *"
+                                formControlName="address">
+                            <div *ngIf="customerForm.controls['address'].invalid && customerForm.controls['address'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['address'].errors.required">
+                                    Address is required.
+                                </div>
+                            </div>
+
+                            <input class="form-control" type="text" name="email" id="email" placeholder="Email *"
+                                formControlName="email">
+                            <div *ngIf="customerForm.controls['email'].invalid && customerForm.controls['email'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['email'].errors.required">
+                                    Email is required.
+                                </div>
+                                <div *ngIf="customerForm.controls['email'].errors.email">
+                                    Enter Valid Email Id
+                                </div>
+                            </div>
+                            <input class="form-control" type="text" name="bankAddress" id="bankAddress"
+                                placeholder="Bank Address *" formControlName="bankAddress">
+                            <div *ngIf="customerForm.controls['bankAddress'].invalid && customerForm.controls['bankAddress'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['bankAddress'].errors.required">
+                                    Bank Address is required.
+                                </div>
+                            </div>
+
+                            <input class="form-control" type="text" name="ifscNo" id="ifscNo"
+                                placeholder="Bank ifsc No *" formControlName="ifscNo">
+                            <div *ngIf="customerForm.controls['ifscNo'].invalid && customerForm.controls['ifscNo'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['ifscNo'].errors.required">
+                                    IFSC Number is required.
+                                </div>
+                                <div *ngIf="customerForm.controls['ifscNo'].errors.minlength">
+                                    IFSC Number must be at least 11 characters
+                                </div>
+                                <div *ngIf="customerForm.controls['ifscNo'].errors.maxlength">
+                                    IFSC Number must not exceed 11 characters
+                                </div>
+                            </div>
+
+                            <br>
+                            &nbsp; &nbsp; &nbsp;
+                            <select id="cylinders" name="cylinders" formControlName="cylinderType">
+                                <option value="" hidden>Choose a type of cylinder:</option>
+                                <option value="Domestic">Domestic</option>
+                                <option value="Commercial">Commercial</option>
+                            </select>
+
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <input class="form-control" type="password" name="password" id="password"
+                                placeholder="Password *" formControlName="password">
+                            <div *ngIf="customerForm.controls['password'].invalid && customerForm.controls['password'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['password'].errors.required">
+                                    Password is required.
+                                </div>
+                                <div *ngIf="customerForm.controls['password'].errors.minlength">
+                                    Password must be at least 8 characters
+                                </div>
+                                <div *ngIf="customerForm.controls['password'].errors.maxlength">
+                                    Password must not exceed 12 characters
+                                </div>
+                            </div>
+
+                            <input class="form-control" type="tel" name="mobileNumber" id="mobileNumber"
+                                placeholder="Mobile Number *" formControlName="mobileNumber">
+                            <div *ngIf="customerForm.controls['mobileNumber'].invalid && customerForm.controls['mobileNumber'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['mobileNumber'].errors.required">
+                                    Mobile Number is required.
+                                </div>
+                                <div *ngIf="customerForm.controls['mobileNumber'].errors.pattern">
+                                    Enter a Valid Mobile Number
+                                </div>
+                                <div *ngIf="customerForm.controls['mobileNumber'].errors.minlength">
+                                    Mobile Number must be at least 10 characters
+                                </div>
+                                <div *ngIf="customerForm.controls['mobileNumber'].errors.maxlength">
+                                    Mobile Number must not exceed 10 characters
+                                </div>
+                                
+
+                            </div>
+
+                            <input class="form-control" type="text" name="bankName" id="bankName"
+                                placeholder="Bank Name *" formControlName="bankName">
+                            <div *ngIf="customerForm.controls['bankName'].invalid && customerForm.controls['bankName'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['bankName'].errors.required">
+                                    Bank Name is required.
+                                </div>
+                            </div>
+
+                            <input class="form-control" type="text" name="accountNo" id="accountNo"
+                                placeholder="Account Number *" formControlName="accountNo">
+                            <div *ngIf="customerForm.controls['accountNo'].invalid && customerForm.controls['accountNo'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['accountNo'].errors.required">
+                                    Account Number is required.
+                                </div>
+                                <div *ngIf="customerForm.controls['accountNo'].errors.minlength">
+                                    Account Number must be at least 9 characters
+                                </div>
+                                <div *ngIf="customerForm.controls['accountNo'].errors.maxlength">
+                                    Account Number must not exceed 18 characters
+                                </div>
+                            </div>
+
+                            <input class="form-control" type="text" name="pan" id="pan" placeholder="Pan Number *"
+                                formControlName="pan">
+                            <div *ngIf="customerForm.controls['pan'].invalid && customerForm.controls['pan'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['pan'].errors.required">
+                                    PAN Number is required.
+                                </div>
+                                <div *ngIf="customerForm.controls['pan'].errors.minlength">
+                                    PAN Number must be at least 10 characters
+                                </div>
+                                <div *ngIf="customerForm.controls['pan'].errors.maxlength">
+                                    PAN Number must not exceed 10 characters
+                                </div>
+                            </div>
+                            <br>
+                            <input type="submit" value="Register" class="btnRegister" [disabled]="customerForm.invalid">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

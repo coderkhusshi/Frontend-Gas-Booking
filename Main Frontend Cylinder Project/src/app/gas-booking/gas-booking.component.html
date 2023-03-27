@@ -1,0 +1,47 @@
+<div class="head"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="column">
+            <div class="body1">
+                <img src="../../assets/Images/booking.png" style="height:400px; width: 450px;">
+            </div>
+        </div>
+
+        <div class="column">
+
+            <div class="body">
+                
+
+                <form [formGroup]="gasbookingForm" (ngSubmit)="saveGasBooking()">
+                    <h2>GasBooking</h2>
+                    <br> 
+
+                    <label for="bookingDate">Booking Date</label>
+                    <input class="form-control" type="text" name="bookingDate" [value]="currentDate" readonly
+                        id="bookingDate" formControlName="bookingDate">
+                    
+                    <label for="bill">Bill</label>
+                    <input class="form-control" type="text" [value]='price' name="bill" id="bill" readonly
+                        formControlName="bill">
+
+                    <label for="customerId">Customer Id</label>
+                    <input class="form-control" type="text" name="customerId" id="customerId"
+                        formControlName="customerId">
+
+                    <div *ngIf="gasbookingForm.controls['customerId'].invalid && gasbookingForm.controls['customerId'].touched"
+                        class="alert alert-danger">
+                        <div *ngIf="gasbookingForm.controls['customerId'].errors.required">
+                            customerId is required.
+                        </div>
+                    </div>
+                    <input type="submit" value="Save GasBooking" class="btn btn-primary" [disabled]="gasbookingForm.invalid">
+        
+                    <hr>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

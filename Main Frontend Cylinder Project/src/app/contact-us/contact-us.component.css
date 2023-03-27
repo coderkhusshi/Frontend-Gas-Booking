@@ -1,0 +1,94 @@
+.head {
+    position: relative;
+    height: 20px;
+    width: auto;
+    padding-top: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-top: 55.3px;
+}
+.image{
+    width:100px;
+    height:60px;
+    margin: auto;
+    margin-left: 220px;
+    float:right;
+    
+}
+.container{
+    width: 1000px;
+    height: auto;
+    justify-content: center;
+
+}
+
+.column {
+    float: left;
+    width: 50%;
+    height: auto; 
+
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.body {
+    width: 400px;
+    background-color:white;
+    height: auto;
+    padding: 0 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius:20px ;
+    float: left;
+}
+.body .box{
+    position: relative;
+    padding: 5px 0;
+    display: flex;
+}
+
+.body .box .icon{
+    min-width: 40px;
+    height: 40px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.body .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+    flex-direction: column;
+    font-weight: 300;
+}
+.body .box .text h3{
+    font-weight: 500px;
+    color: #00bcd4;
+}
+
+.content{
+    max-width: 800px;
+    text-align: center;
+    margin-top: 0px;
+    justify-content: center;
+    margin: auto;
+}
+
+.content h2{
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    
+}
+
+ .content p{
+    font-weight: 700;
+    color:#00bcd4;
+}

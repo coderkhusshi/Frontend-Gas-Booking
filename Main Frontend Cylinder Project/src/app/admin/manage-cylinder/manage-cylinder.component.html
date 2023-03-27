@@ -1,0 +1,30 @@
+<div class="admin">
+    <div class="head2">
+        <p style="text-align:center"> Cylinder </p>
+    </div>
+    <div class="body">
+        <table class="table">
+            <tr>
+                <th>Surrender Id</th>
+                <th>Date</th>
+                <th>Customer Id</th>
+                <th>Cylinder Type</th>
+                <th>Price</th>
+            </tr>
+
+            <tr *ngFor="let cyl of surrender">
+                <td>{{cyl.surrenderId}}</td>
+                <td>{{cyl.surrenderDate}}</td>
+                <td>{{cyl.customer.customerId}}</td>
+                <td>{{cyl.cylinder.type}}</td>
+                <td>{{cyl.cylinder.price}}</td>
+                <td><input type="button" (click)="deleteCylinder(cyl.surrenderId)" value="Delete"
+                        ></td>
+                <!--<td><input type="button" (click)="UpdateCylinder(cyl.type)" value="Edit" class="btn btn-primary">
+                </td>-->
+
+            </tr>
+
+        </table>
+    </div>
+</div>

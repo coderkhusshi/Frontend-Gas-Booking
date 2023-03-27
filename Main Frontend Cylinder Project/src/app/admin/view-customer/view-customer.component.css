@@ -1,0 +1,45 @@
+.head2{
+    position:relative;
+    background-color:rgb(50, 79, 83);
+    height: 45px;
+    width:auto;
+    padding-top: 5px; 
+    margin-bottom: 10px; 
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+}
+
+.body{
+    font-size: 11px;
+    padding: auto;
+}
+
+.head{
+    position:relative;
+    background-color:rgb(50, 79, 83);
+    height: 45px;
+    width:auto;
+    padding-top: 5px; 
+    margin-bottom: 10px; 
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+    margin-top: 66.3px;
+}
+.admin{
+    border: 2px solid #f1f1f1;
+    width: 78%;
+    height:auto;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: rgb(201, 207, 209);
+    float: right;
+}
+input{
+    background-color: red;
+    border: transparent;
+}

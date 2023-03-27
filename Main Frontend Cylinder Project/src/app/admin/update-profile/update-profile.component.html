@@ -1,0 +1,84 @@
+<div class="admin">
+    <div class="head2">
+        <p style="text-align:center">Profile</p>
+    </div>
+    <div class="body">
+        <form [formGroup]="adminForm" (ngSubmit)="update()">
+
+            <label for="adminId">Admin Id</label>
+            <input class="form-control" type="text" name="adminId" id="adminId" readonly formControlName="adminId">
+
+            <label for="username">User Name</label>
+            <input class="form-control" type="text" name="username" id="username" formControlName="username">
+
+            <div *ngIf="adminForm.controls['username'].invalid && adminForm.controls['username'].touched"
+                class="alert alert-danger">
+                <div *ngIf="adminForm.controls['username'].errors.required">
+                    User Name is required.
+                </div>
+            </div>
+
+            <label for="password">Password </label>
+            <input class="form-control" type="password" name="password" id="password" formControlName="password">
+            <div *ngIf="adminForm.controls['password'].invalid && adminForm.controls['password'].touched"
+                class="alert alert-danger">
+                <div *ngIf="adminForm.controls['password'].errors.required">
+                    Password is required.
+                </div>
+                <div *ngIf="adminForm.controls['password'].errors.minlength">
+                    Password must be at least 8 characters
+                </div>
+                <div *ngIf="adminForm.controls['password'].errors.maxlength">
+                    Password must not exceed 12 characters
+                </div>
+            </div>
+
+            <label for="address">address </label>
+            <input class="form-control" type="text" name="address" id="address" formControlName="address">
+            <div *ngIf="adminForm.controls['address'].invalid && adminForm.controls['address'].touched"
+                class="alert alert-danger">
+                <div *ngIf="adminForm.controls['address'].errors.required">
+                    address is required.
+                </div>
+            </div>
+
+            <label for="mobileNumber">mobileNumber </label>
+            <input class="form-control" type="text" name="mobileNumber" id="mobileNumber"
+                formControlName="mobileNumber">
+            <div *ngIf="adminForm.controls['mobileNumber'].invalid && adminForm.controls['mobileNumber'].touched"
+                class="alert alert-danger">
+                <div *ngIf="adminForm.controls['mobileNumber'].errors.required">
+                    Mobile Number is required.
+                </div>
+                <div *ngIf="adminForm.controls['mobileNumber'].errors.pattern">
+                    Enter a Valid Mobile Number
+                </div>
+                <div *ngIf="adminForm.controls['mobileNumber'].errors.minlength">
+                    Mobile Number must be at least 10 characters
+                </div>
+                <div *ngIf="adminForm.controls['mobileNumber'].errors.maxlength">
+                    Mobile Number must not exceed 10 characters
+                </div>
+            </div>
+
+            <label for="email">email </label>
+            <input class="form-control" type="text" name="email" id="email" formControlName="email">
+
+            <div *ngIf="adminForm.controls['email'].invalid && adminForm.controls['email'].touched"
+                class="alert alert-danger">
+                <div *ngIf="adminForm.controls['email'].errors.required">
+                    Email is required.
+                </div>
+                <div *ngIf="adminForm.controls['email'].errors.email">
+                    Enter Valid Email Id
+                </div>
+            </div>
+            <br>
+            <input type="submit" value="Update Details" class="btn btn-primary" [disabled]="adminForm.invalid">
+            <br>
+            <br>
+        </form>
+    </div>
+</div>
+<br>
+<br>

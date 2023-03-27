@@ -1,0 +1,65 @@
+<div class="head">
+    <!--&nbsp;&nbsp;&nbsp; Admin Login-->
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+
+<div class="container">
+    <div class="row">
+        <div class="column">
+            <div class="body1">
+                <img src="../../../assets/Images/login.png" style="height:490px; width: 500px;">
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="image">
+                <img src="../../../assets/Images/avatar-3814081_640.png" style="height:110px; width: 110px;"
+                    class="rounded-pill">
+            </div>
+
+            <div class="body">
+                <form [formGroup]="LoginForm" (ngSubmit)="adminLogin()">
+                    <br>
+                    <br> <br>
+                    <i class="fas fa-user"></i>
+                    <input class="form-control" type="text" placeholder="User Name" name="username" id="username"
+                        formControlName="username">
+
+                    <div *ngIf="LoginForm.controls['username'].invalid && LoginForm.controls['username'].touched"
+                        class="alert alert-danger">
+                        <div *ngIf="LoginForm.controls['username'].errors.required">
+                            User Name is required.
+                        </div>
+                    </div>
+
+                    <i class="fas fa-lock"></i>
+                    <input class="form-control" placeholder="Password" type="password" name="password" id="password"
+                        formControlName="password">
+
+                        <div *ngIf="LoginForm.controls['password'].invalid && LoginForm.controls['password'].touched"
+                        class="alert alert-danger">
+                        <div *ngIf="LoginForm.controls['password'].errors.required">
+                            Password is required.
+                        </div>
+                        <div *ngIf="LoginForm.controls['password'].errors.minlength">
+                            Password must be at least 8 characters
+                        </div>
+                        <div *ngIf="LoginForm.controls['password'].errors.maxlength">
+                            Password must not exceed 12 characters
+                        </div>
+                    </div>
+                    
+                    <a href="forgot" style="float: right; margin-top: 5px;">Forgot password?</a><br>
+
+                    <br>
+                    <input type="submit" value="LOGIN">
+                    <hr>
+                    
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

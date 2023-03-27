@@ -1,0 +1,26 @@
+.navbar{
+  margin-bottom: 0%;
+}
+.nav-link{
+    background-color: transparent;
+    border: transparent;
+}
+
+/*.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here 
+    height: 60px;
+    line-height: 60px;
+  }
+footer.page-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}*/
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/*.navbar a:hover {
+  background-color: rgb(18, 13, 13);
+}*/

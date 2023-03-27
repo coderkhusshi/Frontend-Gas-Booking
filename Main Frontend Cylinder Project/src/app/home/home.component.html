@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="head">
+        <section class="slides-container">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+
+                <div class="slide first">
+                    <img src='../../assets/Images/image1.jpg' alt="">
+                </div>
+                <div class="slide">
+                    <img src='../../assets/Images/image4.jpg' alt="">
+                </div>
+                <div class="slide">
+                    <img src='../../assets/Images/image3.jpg' alt="">
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+            </div>
+            <div class="nevigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </section>
+
+        <section id="connection">
+
+            <h1 class="heading">Choose Your Connection</h1>
+
+            <div class="box-container">
+
+                <div class="box" data-aos="flip-right" data-aos-duration="2000">
+
+                    <h1 style="color:red;">DOMESTIC</h1><br>
+                    <button (click)="gasbook($event)" value="Domestic" type="button" class="btn btn-success">BOOK
+                        NOW</button>
+                </div>
+
+                <div class="box" data-aos="flip-down" data-aos-duration="2000">
+ 
+                    <h1 style="color:red;">COMMERCIAL</h1><br>
+                    <button (click)="gasbook($event)" value="Commercial" type="button" class="btn btn-success">BOOK
+                        NOW</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="measures">
+
+            <h1 class="heading">Safety Measures</h1>
+
+            <div class="box-container">
+
+                <div class="box" data-aos="flip-up" data-aos-duration="2000">
+                    <img src='../assets/Images/secured.jpg' alt="Must be secured">
+                    <div class="info">
+                        <h2>Cylinders Must Be Secured</h2>
+                        <p>Gas cylinders must be secured at all times to prevent tipping.
+
+                            Use appropriate material, such as chain, plastic coated wire cable, commercial straps, etc.,
+                            to
+
+                            secure cylinders.</p>
+                    </div>
+                </div>
+
+                <div class="box" data-aos="flip-down" data-aos-duration="2000">
+                    <img src='../assets/Images/lek.jpg' alt="Valve Open">
+                    <div class="info">
+                        <h2>Never leave the valve open</h2>
+                        <p>when equipment is not in use, even when empty; air and moisture
+
+                            may diffuse through an open valve,
+                            causing contamination and corrosion within the cylinder</p>
+                    </div>
+                </div>
+
+                <div class="box" data-aos="flip-up" data-aos-duration="2000">
+                    <img src='../assets/Images/lekage.jpg' alt="Lekage">
+                    <div class="info">
+                        <h2>If Cylinder Leaks</h2>
+                        <p>If the gas is a corrosive, remove cylinder to an isolated, well-ventilated area.
+                            The stream of leaking gas should be directed into an appropriate neutralizing material and
+                            call on <b>1960</b> to inform about the gas leakage.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="testimonial">
+
+            <h1 class="heading">What Our Customer Says</h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <img src='../assets/Images/user.jpg' alt="">
+                    <div class="info">
+                        <p><i class="fas fa-quote-left"></i>It was always a difficult deal to book cylinder
+                            but this website change whole concept now it is very easy to book a cylinder .<i
+                                class="fas fa-quote-right"></i></p>
+                        <br>
+                        <h2>--Komal</h2>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src='../assets/Images/user.jpg' alt="">
+                    <div class="info">
+                        <p><i class="fas fa-quote-left"></i>It is a very good approach to book cyclinder. When we go
+                            market and book cylinder it will take more time so, this website helps me to save my time<i
+                                class="fas fa-quote-right"></i></p>
+                        <br>
+                        <h2>--Ankit</h2>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src='../assets/Images/user.jpg' alt="">
+                    <div class="info">
+                        <p><i class="fas fa-quote-left"></i>When i book cylinder previuosly it will take more time like
+                            4-5 days but when i book
+                            a cylinder through this website it will take only 1 day fastest delivery <i
+                                class="fas fa-quote-right"></i></p>
+                        <br>
+                        <h2>--Preeti</h2>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src='../assets/Images/user.jpg' alt="">
+                    <div class="info">
+                        <p><i class="fas fa-quote-left"></i>I would recommend this website to book cylinder as i am ver
+                            happy to take the service from this website
+                            as i never seen any leakage or less weight of cylinder<i class="fas fa-quote-right"></i></p>
+                        <br>
+                        <h2>--Abhishek</h2>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+
+            <div class="footer1">
+                <div class="link1 " data-aos="zoom-in-up" data-aos-duration="3000">
+                    <h3><u> GAS STATION</u></h3>
+                    <p>Gas Station solve the entire problems between gas agencies and customers.
+                        We provide the fastest delivery and the door step delivery.
+                        It is the easy way to book cylinder at anytime and at anywhere.
+                    </p>
+                    <br>
+                    <div class="social-media">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
+                <div class="link2">
+                    <img src='../assets/Images/footer.jpg' alt="" width="700" height="350">
+                </div>
+            </div>
+
+
+
+        </footer>
+    </div>
+</body>
+
+</html>

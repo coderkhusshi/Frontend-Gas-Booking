@@ -1,0 +1,164 @@
+<div class="head"></div>
+
+<div class="body">
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+                <form [formGroup]="payForm" (ngSubmit)="payment()">
+                    <div class="row">
+                        <div class="col-50">
+                            <h3>Billing Address</h3>
+
+                            <label for="firstName"><i class="fa fa-user"></i> Full Name</label>
+                            <input class="form-control" type="text" name="firstName" id="firstName"
+                                formControlName="firstName">
+                            <div *ngIf="payForm.controls['firstName'].invalid && payForm.controls['firstName'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="payForm.controls['firstName'].errors.required">
+                                    Name is required.
+                                </div>
+                            </div>
+
+                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                            <input class="form-control" type="text" name="email" id="email" formControlName="email">
+                            <div *ngIf="payForm.controls['email'].invalid && payForm.controls['email'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="payForm.controls['email'].errors.required">
+                                    email is required.
+                                </div>
+                                <div *ngIf="payForm.controls['email'].errors.email">
+                                    Enter Valid Email Id
+                                </div>
+                            </div>
+
+                            <label for="address"><i class="fa fa-address-card-o"></i> Address</label>
+                            <input class="form-control" type="text" name="address" id="address"
+                                formControlName="address">
+                            <div *ngIf="payForm.controls['address'].invalid && payForm.controls['address'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="payForm.controls['address'].errors.required">
+                                    address is required.
+                                </div>
+                            </div>
+
+                            <label for="city"><i class="fa fa-institution"></i> City</label>
+                            <input class="form-control" type="text" name="city" id="city" formControlName="city">
+                            <div *ngIf="payForm.controls['city'].invalid && payForm.controls['city'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="payForm.controls['city'].errors.required">
+                                    city is required.
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-50">
+
+                                    <label for="state">State</label>
+                                    <input class="form-control" type="text" name="state" id="state"
+                                        formControlName="state">
+                                    <div *ngIf="payForm.controls['state'].invalid && payForm.controls['state'].touched"
+                                        class="alert alert-danger">
+                                        <div *ngIf="payForm.controls['state'].errors.required">
+                                            state is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-50">
+
+                                    <label for="zip">Zip</label>
+                                    <input class="form-control" type="text" name="zip" id="zip" formControlName="zip">
+                                    <div *ngIf="payForm.controls['zip'].invalid && payForm.controls['zip'].touched"
+                                        class="alert alert-danger">
+                                        <div *ngIf="payForm.controls['zip'].errors.required">
+                                            zip is required.
+                                        </div>
+                                        <div *ngIf="payForm.controls['zip'].errors.minlength">
+                                            Enter valid 6 digit Zip code
+                                        </div>
+                                        <div *ngIf="payForm.controls['zip'].errors.maxlength">
+                                            Enter valid 6 digit Zip code
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-50">
+                            <h3>Payment</h3>
+                            <label for="fname">Accepted Cards</label>
+                            <div class="icon-container">
+                                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            </div>
+
+                            <label for="cardname">Name on Card</label>
+                            <input class="form-control" type="text" name="cardname" id="cname"
+                                formControlName="cardname">
+                            <div *ngIf="payForm.controls['cardname'].invalid && payForm.controls['cardname'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="payForm.controls['cardname'].errors.required">
+                                    Card Name is required.
+                                </div>
+                            </div>
+
+                            <label for="cardnumber">Credit card number</label>
+                            <input class="form-control" type="text" name="cardnumber" id="cardnumber"
+                                placeholder="1111-2222-3333-4444" formControlName="cardnumber">
+                            <div *ngIf="payForm.controls['cardnumber'].invalid && payForm.controls['cardnumber'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="payForm.controls['cardnumber'].errors.required">
+                                    Card Number is required.
+                                </div>
+                                <div *ngIf="payForm.controls['cardnumber'].errors.pattern">
+                                    Enter a Valid Card Number
+                                </div>
+                                <div *ngIf="payForm.controls['cardnumber'].errors.minlength">
+                                    Enter 16 digit Valid Card Number
+                                </div>
+                                <div *ngIf="payForm.controls['cardnumber'].errors.maxlength">
+                                    Enter 16 digit Valid Card Number
+                                </div>
+                            </div>
+
+                            <label for="cvv">CVV</label>
+                            <input class="form-control" type="text" name="cvv" id="cvv" formControlName="cvv">
+                            <div *ngIf="payForm.controls['cvv'].invalid && payForm.controls['cvv'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="payForm.controls['cvv'].errors.required">
+                                    CVV is required.
+                                </div>
+                                <div *ngIf="payForm.controls['cvv'].errors.pattern">
+                                    Enter a Valid CVV
+                                </div>
+                                <div *ngIf="payForm.controls['cvv'].errors.minlength">
+                                    Enter 3 digit Valid CVV
+                                </div>
+                                <div *ngIf="payForm.controls['cvv'].errors.maxlength">
+                                    Enter 3 digit Valid CVV
+                                </div>
+                            </div>
+                            <label for="expmonth">Exp Date</label>
+                            <input class="form-control" type="month" name="expmonth" id="expmonth"
+                                formControlName="expmonth">
+                            <div *ngIf="payForm.controls['expmonth'].invalid && payForm.controls['expmonth'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="payForm.controls['expmonth'].errors.required">
+                                    Expiry Month is required.
+                                </div>
+                            </div>
+
+                           
+
+                        </div>
+                    </div>
+                    <input type="submit" value="pay" class="btn btn-primary" [disabled]="payForm.invalid">
+
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>

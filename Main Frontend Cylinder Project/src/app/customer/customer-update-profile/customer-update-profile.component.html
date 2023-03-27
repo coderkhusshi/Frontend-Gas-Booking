@@ -1,0 +1,87 @@
+<div class="customer">
+    <div class="head2">
+        <p style="text-align:center">Profile</p>
+    </div>
+    <div class="body">
+        <form [formGroup]="customerForm1" (ngSubmit)="update()">
+
+            <label for="customerId">Customer Id</label>
+            <input class="form-control" type="text" name="customerId" id="customerId" readonly
+                formControlName="customerId">
+
+
+            <label for="username">User Name</label>
+            <input class="form-control" type="text" name="username" id="username" formControlName="username">
+
+            <div *ngIf="customerForm1.controls['username'].invalid && customerForm1.controls['username'].touched"
+                class="alert alert-danger">
+                <div *ngIf="customerForm1.controls['username'].errors.required">
+                    User Name is required.
+                </div>
+            </div>
+
+            <label for="password1">Password </label>
+            <input class="form-control" type="password" name="password1" id="password1" formControlName="password1">
+            <div *ngIf="customerForm1.controls['password1'].invalid && customerForm1.controls['password1'].touched"
+                class="alert alert-danger">
+                <div *ngIf="customerForm1.controls['password1'].errors.required">
+                    Password is required.
+                </div>
+                <div *ngIf="customerForm1.controls['password1'].errors.minlength">
+                    Password must be at least 8 characters
+                </div>
+                <div *ngIf="customerForm1.controls['password1'].errors.maxlength">
+                    Password must not exceed 12 characters
+                </div>
+            </div>
+
+            <label for="address">address </label>
+            <input class="form-control" type="text" name="address" id="address" formControlName="address">
+            <div *ngIf="customerForm1.controls['address'].invalid && customerForm1.controls['address'].touched"
+                class="alert alert-danger">
+                <div *ngIf="customerForm1.controls['address'].errors.required">
+                    address is required.
+                </div>
+            </div>
+
+            <label for="mobileNumber">mobileNumber </label>
+            <input class="form-control" type="text" name="mobileNumber" id="mobileNumber"
+                formControlName="mobileNumber">
+            <div *ngIf="customerForm1.controls['mobileNumber'].invalid && customerForm1.controls['mobileNumber'].touched"
+                class="alert alert-danger">
+                <div *ngIf="customerForm1.controls['mobileNumber'].errors.required">
+                    Mobile Number is required.
+                </div>
+                <div *ngIf="customerForm1.controls['mobileNumber'].errors.pattern">
+                    Enter a Valid Mobile Number
+                </div>
+                <div *ngIf="customerForm1.controls['mobileNumber'].errors.minlength">
+                    Mobile Number must be at least 10 characters
+                </div>
+                <div *ngIf="customerForm1.controls['mobileNumber'].errors.maxlength">
+                    Mobile Number must not exceed 10 characters
+                </div>
+            </div>
+
+
+            <label for="email">email </label>
+            <input class="form-control" type="text" name="email" id="email" formControlName="email">
+
+            <div *ngIf="customerForm1.controls['email'].invalid && customerForm1.controls['email'].touched"
+                class="alert alert-danger">
+                <div *ngIf="customerForm1.controls['email'].errors.required">
+                    Email is required.
+                </div>
+                <div *ngIf="customerForm1.controls['email'].errors.email">
+                    Enter Valid Email Id
+                </div>
+            </div>
+            <br>
+            <input type="submit" value="Update Details" class="btn btn-primary" [disabled]="customerForm1.invalid">
+            <br>
+            <br>
+        </form>
+    </div>
+</div>
+<br>
+<br>

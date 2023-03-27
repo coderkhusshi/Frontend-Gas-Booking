@@ -1,0 +1,36 @@
+<div class="admin">
+    <div class="head2">
+        <p style="text-align:center">GasBookings</p>
+    </div>
+    <div class="body">
+        <form [formGroup]="bookingForm" (ngSubmit)="View()">
+            <label for="customerId">Customer Id</label>&nbsp;
+            <input type="text" name="customerId" id="customerId" formControlName="customerId">&nbsp;&nbsp;
+
+            <label for="fromDate">From</label>&nbsp;
+            <input type="date" name="fromDate" id="fromDate" formControlName="fromDate">&nbsp;&nbsp;
+
+            <label for="toDate">To</label>&nbsp;
+            <input type="date" name="toDate" id="toDate" [max]='currentDate'formControlName="toDate"> &nbsp;&nbsp;
+
+            <input type="submit" value="View" class="btn btn-primary">
+        </form>
+        <br> <br>
+        <table class="table">
+            <tr>
+                <th>Booking Id</th>
+                <th>Booking Date</th>
+                <th>Bill</th>
+                <th>Status</th>
+                <th>CustomerId</th>
+            </tr>
+            <tr *ngFor="let gasBook of gasBooking">
+                <td>{{gasBook.gasBookingId}}</td>
+                <td>{{gasBook.bookingDate}}</td>
+                <td>{{gasBook.bill}}</td>
+                <td>{{gasBook.status}}</td>
+                <td>{{gasBook.customer.customerId}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

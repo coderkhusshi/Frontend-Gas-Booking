@@ -1,0 +1,60 @@
+  .head {
+    position: relative;
+    height: 45px;
+    width: auto;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .form {
+    margin-left: 40px;
+    margin-top: 25px;
+    width: 200px;
+    float: left;
+  }
+
+
+  .form2 {
+    width: 72%;
+    height: 422px;
+    margin-right: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: rgb(215, 210, 220);
+    float: right;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+    /* Should be removed. Only for demonstration */
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .nav-link {
+    background-color: transparent;
+    border: transparent;
+  }
